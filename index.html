@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
   <head>
-    <meta http-equiv="refresh" content="0; url=https://twitter.com/kasukacircle" />
-    <title>KasukaCircle</title>
-    <link rel="icon" href="/favicon.png" type="img/png">
+    <meta charset="UTF-8" />
+    <title>Dialihkan dalam...</title>
+    <script>
+      let seconds = 5;
+      function countdown() {
+        const el = document.getElementById("timer");
+        el.textContent = seconds;
+        seconds--;
+        if (seconds < 0) {
+          window.location.replace("https://twitter.com/nama_akun_kamu");
+        } else {
+          setTimeout(countdown, 1000);
+        }
+      }
+    </script>
   </head>
-  <body>
-    <p>Redirecting...</p>
+  <body onload="countdown()">
+    <h1>Anda akan dialihkan ke Twitter</h1>
+    <p>Redirect dalam <span id="timer">5</span> detik...</p>
   </body>
 </html>
