@@ -14,18 +14,33 @@
         height: 100vh;
         margin: 0;
         text-align: center;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 80%;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
       }
 
       h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         overflow: hidden;
         display: inline-block;
-        border-right: .15em solid orange;
         white-space: nowrap;
         margin: 0;
         padding: 0;
         width: 0;
-        animation: typing 5s steps(50) 1s forwards, blinkCaret 0.75s step-end infinite;
+        animation: typing 6s steps(50) 1s forwards, blinkCaret 0.75s step-end infinite;
+      }
+
+      p {
+        margin-top: 20px;
+        font-size: 1rem;
+        color: #ccc;
       }
 
       @keyframes typing {
@@ -42,10 +57,18 @@
           border-color: transparent;
         }
       }
+
+      /* Untuk responsif, agar teks berpindah ke baris berikutnya */
+      h1 {
+        display: block;
+        white-space: normal;
+      }
     </style>
   </head>
   <body>
-    <h1>苦しんでいる者たちに、そして苦しんでいる者たちにのみ、私はこれを捧げる。</h1>
-    <p>- Osamu Dazai, Tokyo Hakkei</p>
+    <div class="container">
+      <h1>苦しんでいる者たちに、そして苦しんでいる者たちにのみ、私はこれを捧げる。</h1>
+      <p>- Osamu Dazai, Tokyo Hakkei</p>
+    </div>
   </body>
 </html>
