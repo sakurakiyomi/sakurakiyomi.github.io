@@ -2,23 +2,43 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <title>Dialihkan dalam...</title>
-    <script>
-      let seconds = 5;
-      function countdown() {
-        const el = document.getElementById("timer");
-        el.textContent = seconds;
-        seconds--;
-        if (seconds < 0) {
-          window.location.replace("https://twitter.com/nama_akun_kamu");
-        } else {
-          setTimeout(countdown, 1000);
+    <title>Mengarahkan ke Twitter...</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #f0f2f5;
+        text-align: center;
+        padding-top: 100px;
+      }
+      .twitter-logo {
+        width: 80px;
+        height: 80px;
+        margin: 20px auto;
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: fadeInUp 1.5s ease-out forwards;
+      }
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
       }
+    </style>
+    <script>
+      setTimeout(function () {
+        window.location.replace("https://twitter.com/nama_akun_kamu");
+      }, 4000);
     </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=https://twitter.com/nama_akun_kamu" />
+    </noscript>
   </head>
-  <body onload="countdown()">
-    <h1>Anda akan dialihkan ke Twitter</h1>
-    <p>Redirect dalam <span id="timer">5</span> detik...</p>
+  <body>
+    <h1>Mengarahkan Anda ke Twitter</h1>
+    <svg class="twitter-logo" viewBox="0 0 24 24" fill="#1DA1F2" xmlns="http://www.w3.org/2000/svg">
+      <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.4.36a9.86 9.86 0 01-3.13 1.2A4.92 4.92 0 0016.5 0c-2.5 0-4.5 2.13-4.5 4.75 0 .37.04.73.12 1.08A13.94 13.94 0 013 1.64a4.89 4.89 0 001.52 6.55A4.9 4.9 0 012.8 7v.06c0 2.28 1.58 4.18 3.7 4.6a4.93 4.93 0 01-2.03.08 4.92 4.92 0 004.6 3.5A9.9 9.9 0 012 19.54 13.94 13.94 0 008 21c9.14 0 14.3-7.89 13.95-14.99A10.12 10.12 0 0023 3z"/>
+    </svg>
+    <p>Anda akan dialihkan dalam beberapa detik...</p>
   </body>
 </html>
