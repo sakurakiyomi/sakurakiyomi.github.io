@@ -1,75 +1,51 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <title>Mengarahkan ke Twitter...</title>
+    <title>Tulisan Muncul Huruf per Huruf</title>
     <style>
       body {
-        font-family: sans-serif;
-        background: linear-gradient(to right, #e0f7fa, #fce4ec);
+        font-family: 'Arial', sans-serif;
+        background: #1e1e1e;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
         text-align: center;
-        padding-top: 80px;
-        color: #333;
       }
 
       h1 {
-        animation: fadeIn 1s ease-out forwards;
+        font-size: 2rem;
+        overflow: hidden;
+        display: inline-block;
+        border-right: .15em solid orange;
+        white-space: nowrap;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        animation: typing 5s steps(50) 1s forwards, blinkCaret 0.75s step-end infinite;
       }
 
-      .twitter-logo {
-        width: 100px;
-        height: 100px;
-        margin: 40px auto;
-        animation: bounceSpin 2s ease-in-out infinite;
-      }
-
-      p {
-        font-size: 1.1rem;
-        animation: fadeIn 2s ease-out forwards;
-      }
-
-      @keyframes fadeIn {
+      @keyframes typing {
         from {
-          opacity: 0;
-          transform: translateY(-10px);
+          width: 0;
         }
         to {
-          opacity: 1;
-          transform: translateY(0);
+          width: 100%;
         }
       }
 
-      @keyframes bounceSpin {
-        0%, 100% {
-          transform: translateY(0) rotate(0deg);
-        }
-        25% {
-          transform: translateY(-20px) rotate(10deg);
-        }
+      @keyframes blinkCaret {
         50% {
-          transform: translateY(0) rotate(0deg);
-        }
-        75% {
-          transform: translateY(-10px) rotate(-10deg);
+          border-color: transparent;
         }
       }
     </style>
-
-    <script>
-      setTimeout(function () {
-        window.location.replace("https://twitter.com/nama_akun_kamu");
-      }, 5000); // Redirect setelah 5 detik
-    </script>
-
-    <noscript>
-      <meta http-equiv="refresh" content="0; url=https://twitter.com/nama_akun_kamu" />
-    </noscript>
   </head>
   <body>
-    <h1>Menuju ke Twitter</h1>
-    <svg class="twitter-logo" viewBox="0 0 24 24" fill="#1DA1F2" xmlns="http://www.w3.org/2000/svg">
-      <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.4.36a9.86 9.86 0 01-3.13 1.2A4.92 4.92 0 0016.5 0c-2.5 0-4.5 2.13-4.5 4.75 0 .37.04.73.12 1.08A13.94 13.94 0 013 1.64a4.89 4.89 0 001.52 6.55A4.9 4.9 0 012.8 7v.06c0 2.28 1.58 4.18 3.7 4.6a4.93 4.93 0 01-2.03.08 4.92 4.92 0 004.6 3.5A9.9 9.9 0 012 19.54 13.94 13.94 0 008 21c9.14 0 14.3-7.89 13.95-14.99A10.12 10.12 0 0023 3z"/>
-    </svg>
-    <p>苦しんでいる者たちに、そして苦しんでいる者たちにのみ、私はこれを捧げる。</p>
+    <h1>苦しんでいる者たちに、そして苦しんでいる者たちにのみ、私はこれを捧げる。</h1>
+    <p>- Osamu Dazai, Tokyo Hakkei</p>
   </body>
 </html>
